@@ -18,12 +18,11 @@ int main()
       n = to_string(i);   
       
       if(i == 1){
-          r = "true"; 
+          cout << "Output: true";
+          return 0; 
       } else if(i == 42){
           return 0;
       }
       i = 0;
   }
-  cout << "Output: " <<  r;
-  return 0;
 }

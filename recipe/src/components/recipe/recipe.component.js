@@ -62,9 +62,9 @@ class Recipe extends Component {
   getScrollPosition() {
     let self = this
     window.addEventListener('scroll', function() {
-      const { arrDatas, currentOnlineStatus } = self.state
+      const { arrDatas, currentOnlineStatus, isLoading } = self.state
 
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && arrDatas.length && currentOnlineStatus) {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && arrDatas.length && currentOnlineStatus && !isLoading) {
         self.setState( prevState =>  {
           return {
           currentPage: prevState.currentPage+1
